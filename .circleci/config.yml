@@ -21,7 +21,7 @@ jobs:
       - deploy:
           name: Push application docker image
           command:
-            docker tag dockerapp_dockerapp $DOCKER_HUB_USER_ID/dockerapp:$CIRCLE_SHA1
-            docker tag dockerapp_dockerapp $DOCKER_HUB_USER_ID/dockerapp:latest
+            docker tag dockerapp-dockerapp $DOCKER_HUB_USER_ID/dockerapp:$CIRCLE_SHA1
+            docker tag dockerapp-dockerapp $DOCKER_HUB_USER_ID/dockerapp:latest
             docker push $DOCKER_HUB_USER_ID/dockerapp:$CIRCLE_SHA1
             docker push $DOCKER_HUB_USER_ID/dockerapp:latest
